@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DashboardActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="374dp"
+        android:layout_height="102dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/logo_du_ministere_de_la_sante"
+        android:src="@drawable/logo_msss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/codeQRImageView"
+        android:layout_width="374dp"
+        android:layout_height="342dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/qr_code_du_permis_covid"
+        android:src="@drawable/logo_msss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="374dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/permis_de_someone"
+        android:textAlignment="center"
+        android:textColor="#003399"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/codeQRImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="374dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="17dp"
+        android:text="@string/scannez_ce_code_qr_pour_vous_permettre_d_acc_der_des_restaurants_v_nements_et_autres_activit_s"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/codeQRImageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

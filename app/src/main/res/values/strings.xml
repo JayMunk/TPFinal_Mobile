@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TPFinal</string>
+    <string name="logo_du_ministere_de_la_sante">Logo du ministere de la sante</string>
+    <string name="qr_code_du_permis_covid">QR code du permis covid</string>
+    <string name="permis_de_someone">Permis de SOMEONE</string>
+    <string name="email">Email</string>
+    <string name="mot_de_passe">Mot de passe</string>
+    <string name="connexion">Connexion</string>
+    <string name="cr_er_un_compte">Créer un compte</string>
+    <string name="scannez_ce_code_qr_pour_vous_permettre_d_acc_der_des_restaurants_v_nements_et_autres_activit_s">Scannez ce code QR pour vous permettre d\'accéder à des restaurants, événements et autres activités.</string>
+</resources>

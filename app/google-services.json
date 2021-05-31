@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489986469186",
+    "project_id": "tpfinal-1c0f6",
+    "storage_bucket": "tpfinal-1c0f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489986469186:android:aa9d729f192070a58e2cdb",
+        "android_client_info": {
+          "package_name": "com.munger.tpfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489986469186-nvrh4p5vvpg9eg1men7vgort9efupvro.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZarwBaMwX8fl5R4V2PxRe1Oe0p5gsmlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489986469186-nvrh4p5vvpg9eg1men7vgort9efupvro.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
