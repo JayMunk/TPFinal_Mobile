@@ -56,7 +56,7 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
     private void getQR() throws IOException {
-        final File localFile = File.createTempFile("images", "jpg");
+        File localFile = File.createTempFile("images", "jpg");
         storageRef.getFile(localFile).addOnSuccessListener(taskSnapshot -> {
             Bitmap bitmap = BitmapFactory.decodeFile(localFile.getAbsolutePath());
             codeQRImageView.setImageBitmap(bitmap);

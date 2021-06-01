@@ -63,8 +63,7 @@ public class MainActivity extends AppCompatActivity {
         email = emailEditText.getText().toString();
         password = passwordEditText.getText().toString();
         if (!email.equals("") && !password.equals("")) {
-            firebaseAuth.signInWithEmailAndPassword(emailEditText.getText().toString(),
-                    passwordEditText.getText().toString()).addOnCompleteListener(task -> {
+            firebaseAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
                 if (task.isSuccessful()) {
                     login();
                     emailEditText.setText("");
@@ -85,21 +84,19 @@ public class MainActivity extends AppCompatActivity {
         email = emailEditText.getText().toString();
         password = passwordEditText.getText().toString();
         if (!email.equals("") && !password.equals("")) {
-            firebaseAuth.createUserWithEmailAndPassword(emailEditText.getText().toString(),
-                    passwordEditText.getText().toString())
-                    .addOnCompleteListener(this, task -> {
-                        if (task.isSuccessful()) {
-                            FirebaseDatabase.getInstance().getReference().child("Users")
-                                    .child(Objects.requireNonNull(Objects.requireNonNull(task.getResult()).getUser()).getUid())
-                                    .child("email").setValue(email)
-                            ;
-                            generateQR();
-                            emailEditText.setText("");
-                            passwordEditText.setText("");
-                        } else {
-                            Toast.makeText(MainActivity.this, "Création du compte échouée ! Veuillez réessayer!", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+            firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, task -> {
+                if (task.isSuccessful()) {
+                    FirebaseDatabase.getInstance().getReference().child("Users")
+                            .child(Objects.requireNonNull(Objects.requireNonNull(task.getResult()).getUser()).getUid())
+                            .child("email").setValue(email)
+                    ;
+                    generateQR();
+                    emailEditText.setText("");
+                    passwordEditText.setText("");
+                } else {
+                    Toast.makeText(MainActivity.this, "Création du compte échouée ! Veuillez réessayer!", Toast.LENGTH_SHORT).show();
+                }
+            });
         } else {
             Toast.makeText(MainActivity.this, "Remplir les champs",
                     Toast.LENGTH_LONG).show();
